@@ -1,6 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
   box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -155,4 +158,5 @@
     text-align: center;
   }
 }
+
 
