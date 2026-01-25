@@ -46,7 +46,18 @@ body {
   font-weight: bold;
   transition: all 0.3s ease;
 }
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+}
 
+  .header nav a {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    }
+  }
 /* HOVER EFFECT */
 .header nav a:hover {
   background: white;
@@ -219,4 +230,5 @@ body {
     align-items: center;
   }
 }
+
 
