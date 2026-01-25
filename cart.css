@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* HEADER / NAVIGATION */
+    .header {
+      background: #0d6efd;
+      color: white;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .header nav a:hover,
+    .header nav a.active {
+      background: white;
+      color: #0d6efd;
+    }
+    .cart-header {
+      background: #0d6efd;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cart-header a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .header nav a:hover {
+       color: #ff0;
+    }
+
+/* CONTAINER */
+.cart-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.cart-container h1 {
+  margin-bottom: 20px;
+}
+
+/* CART ITEM */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cart-item img {
+  width: 90px;
+  border-radius: 8px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-details h3 {
+  margin-bottom: 5px;
+}
+
+.price {
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+/* QTY */
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.qty button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: #0d6efd;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* REMOVE */
+.remove {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* SUMMARY */
+.cart-summary {
+  background: #f5f7fa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  text-align: right;
+}
+
+.checkout {
+  margin-top: 10px;
+  padding: 12px 25px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.checkout:hover {
+  background: #0a58ca;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-summary {
+    text-align: center;
+  }
+}
+

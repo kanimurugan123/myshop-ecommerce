@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | MyShop</title>
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+/* HEADER */
+.header {
+  background: linear-gradient(90deg, #1e6bff, #0d6efd);
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.header h2 {
+  margin: 0;
+  color: white;
+  font-size: 22px;
+}
+
+/* NAV LINKS */
+.header nav {
+  display: flex;
+  gap: 15px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: white;
+  background: #0a36b9;
+  padding: 8px 18px;
+  border-radius: 5px;   /* 👈 pill shape */
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.header nav a:hover {
+  background: white;
+  color: #0d6efd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+    /* HERO SECTION */
+    .contact-hero {
+      background: linear-gradient(to right, #0d6efd, #0a58ca);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .contact-hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .contact-hero p {
+      font-size: 18px;
+    }
+
+    /* CONTACT CONTAINER */
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+
+    /* CONTACT INFO */
+    .contact-info {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .contact-info h2 {
+      margin-bottom: 20px;
+    }
+
+    .info-box {
+      display: flex;
+      align-items: center;
+      background: white;
+      padding: 12px 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .info-box span {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    /* CONTACT FORM */
+    .contact-form {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .contact-form h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .contact-form button {
+      padding: 12px;
+      background: #0d6efd;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .contact-form button:hover {
+      background: #084298;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      margin-top: 30px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-hero h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <header class="header">
+    <h2>MyShop</h2>
+    <nav>
+      <a href="app.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="cart.html">Cart</a>
+      <a href="login.html" class="login-btn">Login</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="contact-hero">
+    <h1>Get in Touch</h1>
+    <p>We would love to hear from you</p>
+  </section>
+
+  <!-- CONTACT CONTAINER -->
+  <section class="contact-container">
+
+    <!-- LEFT INFO -->
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+
+      <div class="info-box">
+        <span>📍</span>
+        <p>Chennai, Tamil Nadu, India</p>
+      </div>
+
+      <div class="info-box">
+        <span>📞</span>
+        <p>+91 12340 56789</p>
+      </div>
+
+      <div class="info-box">
+        <span>✉️</span>
+        <p>support@myshop.com</p>
+      </div>
+
+      <div class="info-box">
+        <span>⏰</span>
+        <p>Mon - Sat : 9AM - 6PM</p>
+      </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="contact-form">
+      <h2>Send Message</h2>
+
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 MyShop. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | MyShop</title>
+  <link rel="stylesheet" href="login.css">
+
+  <style>
+/* HEADER */
+.header {
+  background: linear-gradient(90deg, #1e6bff, #0d6efd);
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.header h2 {
+  margin: 0;
+  color: white;
+  font-size: 22px;
+}
+
+/* NAV LINKS */
+.header nav {
+  display: flex;
+  gap: 15px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: white;
+  background: #0a36b9;
+  padding: 8px 18px;
+  border-radius: 5px;   /* 👈 pill shape */
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.header nav a:hover {
+  background: white;
+  color: #0d6efd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <header class="header">
+    <h2>MyShop</h2>
+    <nav>
+      <a href="app.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+
+    </nav>
+  </header>
+
+  <!-- LOGIN CONTAINER -->
+  <div class="login-container">
+
+    <!-- LEFT SIDE -->
+    <div class="login-left">
+      <h1>Welcome Back 👋</h1>
+      <p>
+        Login to manage your cart, track orders and enjoy
+        a smooth shopping experience.
+      </p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="login-right">
+      <form onsubmit="return loginValidate()">
+
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password" required>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <p class="extra">
+          <a href="forgot.html">Forgot Password?</a>
+        </p>
+
+        <p class="extra">
+          Don’t have an account?
+          <a href="register.html">Register</a>
+        </p>
+
+      </form>
+    </div>
+
+  </div>
+
+</body>
+<script src="login.js"></script>
+</html>

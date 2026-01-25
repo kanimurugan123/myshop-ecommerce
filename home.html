@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyShop | Products</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+    }
+
+    /* PRODUCTS */
+    .products {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .product-card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product-card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .product-card p {
+      font-weight: bold;
+    }
+
+    .product-card button {
+      margin-top: 10px;
+      width: 100%;
+      padding: 10px;
+      background: #0d6efd;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .product-card button:hover {
+      background: #ff9800;
+    }
+
+    @media (max-width: 768px) {
+      .product-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ✅ NAVIGATION BAR -->
+<header class="header">
+  <h2>MyShop</h2>
+  <nav>
+    <a href="app.html">Home</a>
+    
+    <a href="cart.html">Cart</a>
+  
+    <a href="login.html" class="login-btn">Login</a>
+  </nav>
+</header>
+
+<!-- ✅ PRODUCTS SECTION -->
+<section class="products">
+  <h2>Featured Products</h2>
+
+  <div class="product-list">
+
+    <div class="product-card">
+      <img src="lap4.jpg">
+      <h3>Laptop</h3>
+      <p>₹50,000</p>
+      <button onclick="addToCart('Laptop',50000,'lap4.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="headphone1.jpg">
+      <h3>Headphones</h3>
+      <p>₹2,500</p>
+      <button onclick="addToCart('Headphones',2500,'headphone1.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="speaker.jpg">
+      <h3>Speaker</h3>
+      <p>₹1,500</p>
+      <button onclick="addToCart('Speaker',1500,'speaker.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="watch1.jpg">
+      <h3>Smart Watch</h3>
+      <p>₹4,999</p>
+      <button onclick="addToCart('Smart Watch',4999,'watch1.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="key1.jpg">
+      <h3>Keyboard</h3>
+      <p>₹1,299</p>
+      <button onclick="addToCart('Keyboard',1299,'key1.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="smarttv.jpg">
+      <h3>Smart TV</h3>
+      <p>₹11,299</p>
+      <button onclick="addToCart('Smart TV',11299,'smarttv.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="mouse.jpg">
+      <h3>Mouse</h3>
+      <p>₹1,299</p>
+      <button onclick="addToCart('Mouse',1299,'mouse.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="usb.jpg">
+      <h3>USB Cable</h3>
+      <p>₹299</p>
+      <button onclick="addToCart('USB Cable',299,'usb.jpg')">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<script>
+function addToCart(name, price, image) {
+  let ok = confirm("Do you want to add this item to cart?");
+  if (ok) {
+    localStorage.setItem("name", name);
+    localStorage.setItem("price", price);
+    localStorage.setItem("image", image);
+    localStorage.setItem("qty", 1);
+    window.location.href = "cart.html";
+  }
+}
+</script>
+
+</body>
+</html>
+
