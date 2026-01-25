@@ -10,6 +10,9 @@
   <style>
     body {
       margin: 0;
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
       font-family: Arial, sans-serif;
       background: #f5f7fa;
     }
@@ -67,6 +70,11 @@
     @media (max-width: 768px) {
       .product-list {
         grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 480px) {
+  .product-list {
+    grid-template-columns: 1fr;
+                }
       }
     }
   </style>
@@ -165,4 +173,5 @@ function addToCart(name, price, image) {
 
 </body>
 </html>
+
 
