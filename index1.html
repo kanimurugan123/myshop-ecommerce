@@ -161,18 +161,34 @@
 <script>
 function addToCart(name, price, image) {
   let ok = confirm("Do you want to add this item to cart?");
-  if (ok) {
-    localStorage.setItem("name", name);
-    localStorage.setItem("price", price);
-    localStorage.setItem("image", image);
-    localStorage.setItem("qty", 1);
-    window.location.href = "cart.html";
+  if (!ok) return;
+
+  // old cart items eduththukko
+  let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+  // same product already irukka?
+  let existingItem = cart.find(item => item.name === name);
+
+  if (existingItem) {
+    existingItem.qty += 1;
+  } else {
+    cart.push({
+      name: name,
+      price: price,
+      image: image,
+      qty: 1
+    });
   }
+
+  localStorage.setItem("cartItems", JSON.stringify(cart));
+  window.location.href = "cart.html";
 }
 </script>
 
+
 </body>
 </html>
+
 
 
 
